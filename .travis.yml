@@ -3,7 +3,7 @@ language: python
 
 python:
 
-  - "3.6.3"
+  - "3.6.3s"
 
 install:
     - pip install -r requirements.txt
@@ -17,9 +17,5 @@ script:
 after-success:
   - coveralls
 
-matrix:
-  include:
-    - python 3.7
-    dist: xenial
-    sudo: true
+
 

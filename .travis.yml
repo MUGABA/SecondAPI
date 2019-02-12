@@ -3,7 +3,7 @@ language: python
 
 python:
 
-  - "3.6.3s"
+  - "3.6s"
 
 install:
     - pip install -r requirements.txt

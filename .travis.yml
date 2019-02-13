@@ -9,12 +9,9 @@ install:
     - pip install -r requirements.txt
     - pip install pytest pytest-cov
     - pip install coveralls
-    - coverage run --source=mypkg setup.py test
-    
-
 
 script:
-  - pytest --cov=test_endpoints.py/
+  - pytest --cov=./
 
  after-success:
   - coveralls

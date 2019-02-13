@@ -10,11 +10,10 @@ install:
     - pip install pytest 
     - pip install pytest-cov
     - pip install coveralls
-    - pip install python-coveralls
+    
 
 script:
   - pytest --cov=./
-  
 
  after-success:
   - coveralls

@@ -1,22 +1,22 @@
 
-# language: python
+language: python
 
-# python:
+python:
 
-#   - "3.6-dev"
+  - "3.6-dev"
 
-# install:
-#     - pip install -r requirements.txt
-#     - pip install pytest 
-#     - pip install pytest-cov
-#     - pip install coveralls
+install:
+    - pip install -r requirements.txt
+    - pip install pytest 
+    # - pip install pytest-cov
+    # - pip install coveralls
 
 
-# script:
-#   - pytest --cov=./
+script:
+  - pytest
 
-#  after-success:
-#   - coveralls
+ # after-success:
+ #  - coveralls
 
 
 

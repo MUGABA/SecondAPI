@@ -14,8 +14,7 @@ install:
 
 script:
   - pytest --cov=./
-  - - py.test coveralls./ --doctest-modules --pep8 coveralls -v --cov coveralls --cov-report term-missing
-after_success:
+  
 
  after-success:
   - coveralls

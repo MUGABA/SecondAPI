@@ -35,6 +35,26 @@ class TestApi(unittest.TestCase):
 		self.assertEqual(response.status_code, 200)
 		self.assertIn('Welcome to ireporter', str(response.data))
 
+	def test_empty_incidents_list(self):
+		response = self.client.get('v1/api/red-flags')
+		self.assertEqual(response.status_code, 200)
+
+	def test_empty_user_list(self):
+		response = self.client.get('v1/api/users')
+		self.assertEqual(response.status_code, 200)
+
+	def test_register_user(self):
+		self.assertEqual(len(incident.fetch_all_users()), 0)
+		response = self.client.post('v1/api/users', json = self.test_users)
+		self.assertEqual(response.status_code, 201)
+		self.assertEqual(len(incident.fetch_all_users()), 1)
+
+	def test_report_incident(self):
+		self.assertEqual(len(incident.fetch_all_incidence()), 0)
+		response = self.client.post('v1/api/incidents', json =self.test_incident)
+		self.assertEqual(response.status_code, 201)
+		self.assertEqual(len(incident.fetch_all_incidence()), 1)
+
 
 if __name__ == '__main__':
 	unittest.main()

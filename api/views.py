@@ -59,7 +59,7 @@ def report_incident():
 
 	if not request.json or not request.get_json()['incident_type']  \
 	or not request.get_json()['created_by']  \
-	or not request.get_json()['status'] or not request.get_json()['location'] \
+	or not request.get_json()['Status'] or not request.get_json()['location'] \
 	or not request.get_json()['images'] or not request.get_json()['videos'] \
 	or not request.get_json()['comment']:
 
@@ -67,7 +67,7 @@ def report_incident():
 
 	incident_type, created_by, status, location, images, videos, comment = \
 	request.get_json()['incident_type'], request.get_json()['created_by'], \
-	request.get_json()['status'], request.get_json()['location'], \
+	request.get_json()['Status'], request.get_json()['location'], \
 	request.get_json()['images'], request.get_json()['videos'], request.get_json()['comment']
 
 

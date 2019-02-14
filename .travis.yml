@@ -10,12 +10,12 @@ install:
     - pip install pytest 
     - pip install pytest-cov
     - pip install coveralls
-    - pip install coveralls-python
+    
 
 
 script:
   - pytest
-  - coverage run --source=my_package setup.py test
+  - pytest --cov=./
 
  after-success:
    - coveralls

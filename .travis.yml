@@ -14,6 +14,7 @@ install:
 
 script:
   - pytest
+  - coverage run --source=my_package setup.py test
 
  after-success:
    - coveralls

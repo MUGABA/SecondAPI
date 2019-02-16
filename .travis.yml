@@ -16,7 +16,7 @@ install:
 script:
   - pytest
   - pytest --cov=./
-  - py.test test_endpoints.py --cov=.
+  #- py.test test_endpoints.py --cov=.
 
 after-success:
 - coveralls

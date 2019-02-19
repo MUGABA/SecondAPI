@@ -18,6 +18,10 @@ script:
   - pytest --cov=./
   #- py.test test_endpoints.py --cov=.
 
+branches:
+  only:
+  - master
+
 after-success:
 - coveralls
 - coverage report

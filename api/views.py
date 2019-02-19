@@ -132,21 +132,3 @@ def delete_specific_incident(redflag_id):
 	else:
 		return jsonify({"Status Code":200, "message" : "no incident found" })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

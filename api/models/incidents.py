@@ -37,7 +37,7 @@ class IncidentList:
 		if len(self.incident_list) == 0:
 			return 1
 		else:
-			return len(self.incident_list)+ 1
+			return len(self.incident_list) + 1
 
 
 	def user_id_generator(self):
